@@ -1,12 +1,16 @@
+#Avaliação feita no VSCode
+#Lib usada
 import math
+import os
 
+#Calculos
 def Avaliacao_Pratica_1A():
 #A) Implemente o programa que calcule o volume de uma esfera de raio R. O usuário fornecerá o dado necessário.
     
     raio = float(input('Digite o raio R : '))
     volume = (4/3) * 3.14 * (raio**2)
 
-    print(f"O volume da efera de raio R {raio} é igual à: {volume:.2f}")
+    input(f"O volume da efera de raio R {raio} é igual à: {volume:.2f}")
 
 def Avaliacao_Pratica_1B():
 #B) Construa o programa que tendo como dados de entrada dois pontos quaisquer do plano cartesiano, P(x1, y1) e Q(x2, y2), calcule a distância entre eles.
@@ -21,7 +25,7 @@ def Avaliacao_Pratica_1B():
 
     distancia = calcular_distancia(x1, y1, x2, y2)
 
-    print(f"A distância entre os pontos P({x1}, {y1}) e Q({x2}, {y2}) é {distancia:.2f}")
+    input(f"A distância entre os pontos P({x1}, {y1}) e Q({x2}, {y2}) é {distancia:.2f}")
 
 def Avaliacao_Pratica_1C(): 
 # C) Desenvolva o programa que classifique dois valores inteiros quaisquer em ordem crescente. Os valores serão fornecidos pelo usuário.
@@ -29,11 +33,11 @@ def Avaliacao_Pratica_1C():
     valor2 = int(input("Digite o segundo valor inteiro: "))
 
     if valor1 < valor2:
-        print(f"A ordem crescente dos valores é: {valor1}, {valor2}")
+        input(f"A ordem crescente dos valores é: {valor1}, {valor2}")
     elif valor1 > valor2:
-        print(f"A ordem crescente dos valores é: {valor2}, {valor1}")
+        input(f"A ordem crescente dos valores é: {valor2}, {valor1}")
     else:
-        print("Os valores são iguais.")
+        input("Os valores são iguais.")
 
 def Avaliacao_Pratica_1D():
 #D) Construa o programa que calcule o peso ideal de uma pessoa.
@@ -50,10 +54,27 @@ def Avaliacao_Pratica_1D():
     elif sexo == "F":
         peso_ideal = (62.1 * altura) - 44.7
     else:
-        print("Sexo inválido.")
+        input("Sexo inválido.")
         return
 
-    print(f"O peso ideal para uma pessoa do sexo {sexo} com altura {altura} é {peso_ideal:.2f} kg")
+    input(f"O peso ideal para uma pessoa do sexo {sexo} com altura {altura} é {peso_ideal:.2f} kg")
 
-#Executar Tarefa
-Avaliacao_Pratica_1A()
+#main
+while True:
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print('Avaliação\nEscolha\n[a]Questão A\n[b]Questão B\n[c]Questão C\n[d]Questão D\n[e]Exit')
+
+    escolha = str(input('>>> '))
+    if escolha == 'a':
+        Avaliacao_Pratica_1A()
+    elif escolha == 'b':
+        Avaliacao_Pratica_1B()
+    elif escolha == 'c':
+        Avaliacao_Pratica_1C()
+    elif escolha == 'd':
+        Avaliacao_Pratica_1D()
+    elif escolha == 'e':
+        print('bye bye')
+        break
+    else:
+        input('escolha entre a, b, c ou d.')

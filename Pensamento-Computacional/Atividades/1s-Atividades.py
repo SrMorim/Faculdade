@@ -80,11 +80,11 @@ def AprovadoReprovado():
     else:
         print('digite o número')
 
+
 # Avaliações Práticas - Básico 1 Semestre
 
 def Avaliacao_Pratica_1A():
 #A) Implemente o programa que calcule o volume de uma esfera de raio R. O usuário fornecerá o dado necessário.
-    
     raio = float(input('Digite o raio R : '))
     volume = (4/3) * 3.14 * (raio**2)
 
@@ -137,18 +137,6 @@ def Avaliacao_Pratica_1D():
 
     print(f"O peso ideal para uma pessoa do sexo {sexo} com altura {altura} é {peso_ideal:.2f} kg")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 #Run
-Avaliacao_Pratica_1D()
+AprovadoReprovado()
+
