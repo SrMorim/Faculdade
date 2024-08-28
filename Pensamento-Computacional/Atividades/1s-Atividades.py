@@ -80,6 +80,48 @@ def AprovadoReprovado():
     else:
         print('digite o número')
 
+def ValorDVenda():
+#Recebe os valores de compra e de venda, lê os valores, converta para float e atribui à variavel.
+    vl_compra = float(input('Digite o valor de compra: '))
+    vl_venda = float(input('Digite o valor de venda: '))
+    if vl_compra < vl_venda:
+        print(f'Lucro, o valor da compra foi {vl_compra} e o valor da venda foi {vl_venda}, lucro foi de {vl_venda - vl_compra}')
+    elif vl_compra > vl_venda:
+        print(f'Prejuízo. o valor da compra foi {vl_compra} e o valor da venda foi {vl_venda}, o valor de prejuízo foi de {vl_compra - vl_venda}')
+    else:
+        print('Empate')
+    
+def AnoDeNascimento():
+#Calcule o programa que leia o ano de nascimento de uma pessoa e mostre se ela tem idade para votar (16 anos ou mais). Mostre a imagem informando a situação.
+    idade = int(input('Digite a sua idade: '))
+    if (idade >= 16 and idade <= 17):
+        print(f'Você tem {idade} anos, pode votar')
+    elif idade >= 18:
+        print(f'Você tem {idade} anos, pode votar e tirar CNH')
+    else:
+        print(f'Você tem {idade} anos, não pode votar')
+        
+def CalculoRaiz():
+# Projete o programa que calcule as raízes de uma equação do segundo grau. O usuário fornecerá os valores dos coeficientes a, b e c. Levando em consideração  a análise da existencia de raízes nos reais.; Se delta for igual a zero, existem duas raízes iguais; se delta for igual a zero, existem duas raízes iguais; se delta for maior que zero, existem duas raizes reais e distintas. 
+    a = float(input("Digite o valor do coeficiente a: "))
+    b = float(input("Digite o valor do coeficiente b: "))
+    c = float(input("Digite o valor do coeficiente c: "))
+
+    delta = b**2 - 4*a*c
+    print(delta)
+    if (a == 0 or b == 0 or c == 0):
+        print("O coeficiente a não pode ser zero.")
+    elif delta > 0:
+        raiz1 = (-b + math.sqrt(delta)) / (2*a)
+        raiz2 = (-b - math.sqrt(delta)) / (2*a)
+        print(f"As raízes da equação são {raiz1} e {raiz2}")
+    elif delta == 0:
+        raiz = -b / (2*a)
+        print(f"A equação possui uma raiz dupla: {raiz}")
+    else:
+        print("A equação não possui raízes reais.")
+
+
 
 # Avaliações Práticas - Básico 1 Semestre
 
@@ -138,5 +180,5 @@ def Avaliacao_Pratica_1D():
     print(f"O peso ideal para uma pessoa do sexo {sexo} com altura {altura} é {peso_ideal:.2f} kg")
 
 #Run
-AprovadoReprovado()
+CalculoRaiz()
 
