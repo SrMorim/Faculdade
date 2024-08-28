@@ -1,5 +1,4 @@
 #Script em python que tem todas as atividades passadas em aula de "Pensamento Computacional" do 1º Semestre.
-
 #Libs usadas
 import math
 
@@ -79,7 +78,7 @@ def AprovadoReprovado():
         print ('APROVADO')
     else:
         print('digite o número')
-
+#28.08.24
 def ValorDVenda():
 #Recebe os valores de compra e de venda, lê os valores, converta para float e atribui à variavel.
     vl_compra = float(input('Digite o valor de compra: '))
@@ -122,9 +121,8 @@ def CalculoRaiz():
         print("A equação não possui raízes reais.")
 
 
-
-# Avaliações Práticas - Básico 1 Semestre
-
+#Avaliações Práticas - Básico 1º Semestre
+#Avaliação Prática 1
 def Avaliacao_Pratica_1A():
 #A) Implemente o programa que calcule o volume de uma esfera de raio R. O usuário fornecerá o dado necessário.
     raio = float(input('Digite o raio R : '))
@@ -178,6 +176,13 @@ def Avaliacao_Pratica_1D():
         return
 
     print(f"O peso ideal para uma pessoa do sexo {sexo} com altura {altura} é {peso_ideal:.2f} kg")
+
+#Avaliação Prática 2
+def Avaliacao_Pratica_2A():
+    print('ainda não publicou')
+
+
+
 
 #Run
 CalculoRaiz()
