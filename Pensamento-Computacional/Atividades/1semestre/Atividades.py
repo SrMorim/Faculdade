@@ -1,6 +1,7 @@
 #Script em python que tem todas as atividades passadas em aula de "Pensamento Computacional" do 1º Semestre.
 #Libs usadas
 import math
+import math
 
 #Nível Básico
 #21.08.24
@@ -119,6 +120,96 @@ def CalculoRaiz():
         print(f"A equação possui uma raiz dupla: {raiz}")
     else:
         print("A equação não possui raízes reais.")
+#11.09.24
+def MenorValor():
+    vmaior = -999999
+    vmenor = 999999
+    contador = 0
+    soma = 0
+    while True:
+        valor = int(input('Digite o valor, 0 para sair: '))
+        if valor == 0:
+            break
+        contador += 1
+        soma += valor
+        if valor < vmenor:
+            vmenor = valor
+        if valor > vmaior:
+            vmaior = valor
+    print('o maior valor inserido:', vmaior)
+    print('o menor valor é:', vmenor)
+    print('Você inseriu', contador, 'números.')
+    print('a soma de tudo é:', soma)
+    print('a média de tudo é:', soma / contador)
+
+def AlturaEGenero():
+    #Elabore o programa que leia a altura e o genero ("m" para masculino e "f" para feminino) de um grupo de pessoas. Gere a tela de saida com maior altura do grupo (de todas as pessoas), quantidade de homens e mulheres.
+    altura = 0
+    maior_altura = 0
+    qtd_homens = 0
+    qtd_mulheres = 0
+    while True:
+        altura = float(input('Digite a altura em metros: '))
+        if altura == 0:
+            break
+        genero = input('Digite o genero (m/f): ')
+        if altura > maior_altura:
+            maior_altura = altura
+        if genero == 'm':
+            qtd_homens += 1
+        elif genero == 'f':
+            qtd_mulheres += 1
+    print('A maior altura do grupo é:', maior_altura)
+    print('Quantidade de homens:', qtd_homens)
+    print('Quantidade de mulheres:', qtd_mulheres)
+#25.09.24
+def Range():
+    for i in range(11):
+        print(i, end=' ')
+
+def RangeA():
+    for i in range(1, 11):
+        print(i, end='     ')
+
+def RangeB():
+    for i in range(10):
+        print(i, end=',')
+
+def RangeC():
+    for i in range(10):
+        print(i, end=',')
+    print(i +1 , '.')
+
+def RangeD():
+    for i in range(2, 13, 2): 
+        print(i, end=' ')
+
+def RangeE():
+    for i in range(1, 14, 2):
+        print(i, end=' ')
+
+def RangeF():
+    for i in range(7, -1, -1):
+        print(i, end=' ')
+
+def RangeG():
+    somador = 0
+    for i in range(10, 0, -1):
+        print(i, end=' ')
+        somador += i
+    print("\nSoma da sequência:", somador)
+
+def RangeH():
+    inicio = int(input("Digite o valor inicial da sequência: "))
+    fim = int(input("Digite o valor final da sequência: "))
+    
+    for num in range(inicio, fim, -1):
+        print(num, end=' ')
+
+
+
+#Run
+RangeH()
 
 
 #Avaliações Práticas - Básico 1º Semestre
@@ -225,9 +316,3 @@ def Avaliacao_Pratica_2C():
         print('Resultado:', n1 / n2)
     elif escolha == 5:
         print('bye bye')
-
-
-
-#Run
-CalculoRaiz()
-
